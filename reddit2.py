@@ -7,45 +7,70 @@ import time
 import datetime
 
 # 2020年はうるう年
-
+size = 30 
 timelist = []
 
-for i in range(1,31+1):
-    timelist.append(datetime.datetime(2020,1,i,0,0).strftime('%s'))
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2020,1,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,2,1,0,0).strftime('%s'))
+
 
 
 # for i in range(1,29+1):
-#     timelist.append(datetime(2020,2,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,2,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,3,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime(2020,3,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,3,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,4,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime(2020,4,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,4,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,5,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime(2020,5,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,5,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,6,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime(2020,6,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,6,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,7,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime(2020,7,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,7,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,8,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime(2020,8,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,8,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,9,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime(2020,9,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,9,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,10,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime(2020,10,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,10,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,11,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime(2020,11,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,11,i,0,0).strftime('%s'))
 
-# for i in range(1,31+1):
-#     timelist.append(datetime(2020,12,i,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,12,1,0,0).strftime('%s'))
+
+for i in range(1,31+1):
+    timelist.append(datetime.datetime(2020,12,i,0,0).strftime('%s'))
+
+timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
 
 
 
@@ -53,11 +78,12 @@ for i in range(1,31+1):
 
 def getPushshiftData(query, after, before):
     #Build URL
-    url = 'https://api.pushshift.io/reddit/search/comment/?q='+str(query)+'&size=5&after='+str(after)+'&before='+str(before)+'&sort=desc&sort_type=score'
+    url = 'https://api.pushshift.io/reddit/search/comment/?q='+str(query)+'&size='+str(size)+'&after='+str(after)+'&before='+str(before)+'&sort=desc&sort_type=score'
     #Print URL to show user
     print(url)
     #Request URL
     r = requests.get(url)
+    print(r.headers.get('content-type'))
     #Load JSON data from webpage into data variable
     data = json.loads(r.text)
     #return the data element which contains all the submissions data
@@ -97,8 +123,10 @@ for i in range(0,len(timelist)):
 def updateSubs_file():
     upload_count = 0
     #location = "\\Reddit Data\\" >> If you're running this outside of a notebook you'll need this to direct to a specific location
-    print("input filename of submission file, please add .csv")
-    filename = input() #This asks the user what to name the file
+    # print("input filename of submission file, please add .csv")
+    filename="Dec2020size30.csv"
+    # ファイルの名前を変える
+    # filename = input() #This asks the user what to name the file
     file = filename
     with open(file, 'w', newline='', encoding='utf-8') as file: 
         a = csv.writer(file, delimiter=',')
