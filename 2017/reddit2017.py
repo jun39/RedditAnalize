@@ -6,6 +6,7 @@ import csv #To Convert final table into a csv file to save to your machine
 import time
 import datetime
 
+# ９月がとれない
 # 2016年はうるう年
 size = 30 
 timelist = []
@@ -53,10 +54,10 @@ timelist = []
 
 # timelist.append(datetime.datetime(2017,9,1,0,0).strftime('%s'))
 
-for i in range(1,30+1):
-    timelist.append(datetime.datetime(2017,9,i,0,0).strftime('%s'))
+# for i in range(1,30+1):
+#     timelist.append(datetime.datetime(2017,9,i,0,0).strftime('%s'))
 
-timelist.append(datetime.datetime(2017,10,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2017,10,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
 #     timelist.append(datetime.datetime(2017,10,i,0,0).strftime('%s'))
@@ -68,10 +69,10 @@ timelist.append(datetime.datetime(2017,10,1,0,0).strftime('%s'))
 
 # timelist.append(datetime.datetime(2017,12,1,0,0).strftime('%s'))
 
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,12,i,0,0).strftime('%s'))
+for i in range(1,31+1):
+    timelist.append(datetime.datetime(2017,12,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,1,1,0,0).strftime('%s'))
+timelist.append(datetime.datetime(2017,1,1,0,0).strftime('%s'))
 
 
 
@@ -130,7 +131,7 @@ def updateSubs_file():
 
 
 
-    filename="Sep2017size30.csv"
+    filename="Dec2017size30.csv"
     # ファイルの名前を変える
 
 
