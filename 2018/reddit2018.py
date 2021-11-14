@@ -15,17 +15,18 @@ timelist = []
 
 # timelist.append(datetime.datetime(2018,2,1,0,0).strftime('%s'))
 
+# ２月と３月だけとれない prawで試す　https://github.com/dmarx/psaw
 
 
-# for i in range(1,28+1):
-#     timelist.append(datetime.datetime(2018,2,i,0,0).strftime('%s'))
+for i in range(1,28+1):
+    timelist.append(datetime.datetime(2018,2,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2018,3,1,0,0).strftime('%s'))
+timelist.append(datetime.datetime(2018,3,1,0,0).strftime('%s'))
 
-for i in range(1,31+1):
-    timelist.append(datetime.datetime(2018,3,i,0,0).strftime('%s'))
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2018,3,i,0,0).strftime('%s'))
 
-timelist.append(datetime.datetime(2018,4,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2018,4,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
 #     timelist.append(datetime.datetime(2018,4,i,0,0).strftime('%s'))
@@ -70,7 +71,7 @@ timelist.append(datetime.datetime(2018,4,1,0,0).strftime('%s'))
 # for i in range(1,31+1):
 #     timelist.append(datetime.datetime(2018,12,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2018,1,1,0,0).strftime('%s'))
 
 
 
@@ -129,7 +130,7 @@ def updateSubs_file():
 
 
 
-    filename="March2018size30.csv"
+    filename="Feb2_2018size30.csv"
     # ファイルの名前を変える
 
 

@@ -6,71 +6,71 @@ import csv #To Convert final table into a csv file to save to your machine
 import time
 import datetime
 
-# 2020年はうるう年
+# 2019年はうるう年
 size = 30 
 timelist = []
 
-for i in range(1,31+1):
-    timelist.append(datetime.datetime(2020,1,i,0,0).strftime('%s'))
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2019,1,i,0,0).strftime('%s'))
 
-timelist.append(datetime.datetime(2020,2,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,2,1,0,0).strftime('%s'))
 
 
 
 # for i in range(1,28+1):
-#     timelist.append(datetime.datetime(2020,2,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,2,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,3,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,3,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,3,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,3,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,4,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,4,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,4,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,4,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,5,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,5,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,5,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,5,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,6,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,6,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,6,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,6,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,7,1,0,0).strftime('%s'))
-
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,7,i,0,0).strftime('%s'))
-
-# timelist.append(datetime.datetime(2020,8,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,7,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,8,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,7,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,9,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,8,1,0,0).strftime('%s'))
+
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2019,8,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2019,9,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,9,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,9,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,10,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,10,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,10,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,10,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,11,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,11,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,11,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2019,11,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,12,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2019,12,1,0,0).strftime('%s'))
 
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,12,i,0,0).strftime('%s'))
+for i in range(1,31+1):
+    timelist.append(datetime.datetime(2019,12,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
+timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
 
 
 
@@ -84,8 +84,9 @@ def getPushshiftData(query, after, before):
     #Request URL
     r = requests.get(url)
     print(r.headers.get('content-type'))
-    #Load JSON data from webpage into data variable
     data = json.loads(r.text)
+    #Load JSON data from webpage into data variable
+
     #return the data element which contains all the submissions data
     return data['data']
 
@@ -117,6 +118,7 @@ for i in range(0,len(timelist)):
     after = timelist[i]
     before = timelist[i+1]
     data = getPushshiftData(query, after, before)
+    time.sleep(3)
     for submission in data:
         collectSubData(submission)
 
@@ -124,8 +126,13 @@ def updateSubs_file():
     upload_count = 0
     #location = "\\Reddit Data\\" >> If you're running this outside of a notebook you'll need this to direct to a specific location
     # print("input filename of submission file, please add .csv")
-    filename="Jan2021size30.csv"
+
+
+
+    filename="Dec2019size30.csv"
     # ファイルの名前を変える
+
+
     # filename = input() #This asks the user what to name the file
     file = filename
     with open(file, 'w', newline='', encoding='utf-8') as file: 

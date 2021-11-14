@@ -6,72 +6,71 @@ import csv #To Convert final table into a csv file to save to your machine
 import time
 import datetime
 
-# ９月がとれない prawで試す　https://github.com/dmarx/psaw
-# 2016年はうるう年
+# 2020年はうるう年
 size = 30 
 timelist = []
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,1,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,1,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,2,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,2,1,0,0).strftime('%s'))
 
 
 
 # for i in range(1,28+1):
-#     timelist.append(datetime.datetime(2017,2,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,2,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,3,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,3,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,3,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,3,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,4,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,4,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2017,4,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,4,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,5,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,5,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,5,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,5,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,6,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,6,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2017,6,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,6,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,7,1,0,0).strftime('%s'))
-
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,7,i,0,0).strftime('%s'))
-
-# timelist.append(datetime.datetime(2017,8,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,7,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,8,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,7,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,9,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,8,1,0,0).strftime('%s'))
+
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2020,8,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,9,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2017,9,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2020,9,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2017,10,1,0,0).strftime('%s'))
-
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2017,10,i,0,0).strftime('%s'))
-
-# timelist.append(datetime.datetime(2017,11,1,0,0).strftime('%s'))
-
-# for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2017,11,i,0,0).strftime('%s'))
-
-# timelist.append(datetime.datetime(2017,12,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2020,10,1,0,0).strftime('%s'))
 
 for i in range(1,31+1):
-    timelist.append(datetime.datetime(2017,12,i,0,0).strftime('%s'))
+    timelist.append(datetime.datetime(2020,10,i,0,0).strftime('%s'))
 
-timelist.append(datetime.datetime(2017,1,1,0,0).strftime('%s'))
+timelist.append(datetime.datetime(2020,11,1,0,0).strftime('%s'))
+
+# for i in range(1,30+1):
+#     timelist.append(datetime.datetime(2020,11,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2020,12,1,0,0).strftime('%s'))
+
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2020,12,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
 
 
 
@@ -125,15 +124,10 @@ for i in range(0,len(timelist)):
 
 def updateSubs_file():
     upload_count = 0
-    # location = "\\Reddit Data\\" >> If you're running this outside of a notebook you'll need this to direct to a specific location
+    #location = "\\Reddit Data\\" >> If you're running this outside of a notebook you'll need this to direct to a specific location
     # print("input filename of submission file, please add .csv")
-
-
-
-    filename="Dec2017size30.csv"
+    filename="Oct2021size30.csv"
     # ファイルの名前を変える
-
-
     # filename = input() #This asks the user what to name the file
     file = filename
     with open(file, 'w', newline='', encoding='utf-8') as file: 
