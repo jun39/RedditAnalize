@@ -53,3 +53,6 @@ wordcloud = WordCloud(background_color="white",
                       font_path=fpath, width=900, height=500).generate(text)
 
 wordcloud.to_file("./wordcloud_sample.png")
+
+# pythonでのgarchのやり方
+# https://arch.readthedocs.io/en/latest/univariate/introduction.html
