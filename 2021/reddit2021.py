@@ -11,64 +11,64 @@ size = 30
 timelist = []
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,1,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,1,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,2,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,2,1,0,0).strftime('%s'))
 
 
 
 # for i in range(1,28+1):
-#     timelist.append(datetime.datetime(2020,2,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,2,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,3,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,3,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,3,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,3,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,4,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,4,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,4,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,4,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,5,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,5,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,5,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,5,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,6,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,6,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,6,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,6,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,7,1,0,0).strftime('%s'))
-
-# for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,7,i,0,0).strftime('%s'))
-
-# timelist.append(datetime.datetime(2020,8,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,7,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,8,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,7,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,9,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,8,1,0,0).strftime('%s'))
+
+# for i in range(1,31+1):
+#     timelist.append(datetime.datetime(2021,8,i,0,0).strftime('%s'))
+
+# timelist.append(datetime.datetime(2021,9,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,9,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,9,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,10,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,10,1,0,0).strftime('%s'))
 
 for i in range(1,31+1):
-    timelist.append(datetime.datetime(2020,10,i,0,0).strftime('%s'))
+    timelist.append(datetime.datetime(2021,10,i,0,0).strftime('%s'))
 
-timelist.append(datetime.datetime(2020,11,1,0,0).strftime('%s'))
+timelist.append(datetime.datetime(2021,11,1,0,0).strftime('%s'))
 
 # for i in range(1,30+1):
-#     timelist.append(datetime.datetime(2020,11,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,11,i,0,0).strftime('%s'))
 
-# timelist.append(datetime.datetime(2020,12,1,0,0).strftime('%s'))
+# timelist.append(datetime.datetime(2021,12,1,0,0).strftime('%s'))
 
 # for i in range(1,31+1):
-#     timelist.append(datetime.datetime(2020,12,i,0,0).strftime('%s'))
+#     timelist.append(datetime.datetime(2021,12,i,0,0).strftime('%s'))
 
 # timelist.append(datetime.datetime(2021,1,1,0,0).strftime('%s'))
 
@@ -118,7 +118,7 @@ for i in range(0,len(timelist)):
     after = timelist[i]
     before = timelist[i+1]
     data = getPushshiftData(query, after, before)
-    time.sleep(3)
+    time.sleep(1)
     for submission in data:
         collectSubData(submission)
 
@@ -126,7 +126,7 @@ def updateSubs_file():
     upload_count = 0
     #location = "\\Reddit Data\\" >> If you're running this outside of a notebook you'll need this to direct to a specific location
     # print("input filename of submission file, please add .csv")
-    filename="Oct2021size30.csv"
+    filename="Nov2021size30.csv"
     # ファイルの名前を変える
     # filename = input() #This asks the user what to name the file
     file = filename

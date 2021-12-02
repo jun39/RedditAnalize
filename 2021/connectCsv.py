@@ -22,5 +22,5 @@ df = pd.concat(data_list, axis=0, sort=True)
 # 時間順を降順で揃える
 df.sort_values(by = 'Publish Date', ascending = True, inplace = True) 
 
-df.to_csv("total2021size30.csv",index=False)
+df.to_csv("update2021size30.csv",index=False)
 
