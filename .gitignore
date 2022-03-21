@@ -1,2 +1,3 @@
 finBertmodel.pickle
 *.pickle
+.DS_store
